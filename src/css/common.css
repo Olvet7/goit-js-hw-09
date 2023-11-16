@@ -16,3 +16,26 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer {
+  display: flex;
+}
+
+.value {
+  font-size: 40px;
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
