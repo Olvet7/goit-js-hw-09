@@ -15,7 +15,7 @@ function onStart() {
     startBtn.toggleAttribute('disabled');
 }
 
-// Функція зупинки
+// Функція зупинки зміни кольору фону
 function onStop() {
   clearInterval(intervalId);
   startBtn.removeAttribute('disabled');
