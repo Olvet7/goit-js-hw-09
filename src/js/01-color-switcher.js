@@ -4,6 +4,7 @@ const stopBtn = document.querySelector('[data-stop]');
 const body = document.querySelector('body');
 // ID таймеру
 let intervalId = null;
+stopBtn.toggleAttribute('disabled');
 
 // Слухачі на кнопки старт і стоп
 startBtn.addEventListener('click', onStart);
@@ -13,12 +14,14 @@ stopBtn.addEventListener('click', onStop);
 function onStart() {
     intervalId = setInterval(onChangeBG, 1000);
     startBtn.toggleAttribute('disabled');
+    stopBtn.toggleAttribute('disabled');
 }
 
 // Функція зупинки зміни кольору фону
 function onStop() {
   clearInterval(intervalId);
-  startBtn.removeAttribute('disabled');
+  startBtn.toggleAttribute('disabled');
+  stopBtn.toggleAttribute('disabled');
 }
 
 // Зміна кольору фону
